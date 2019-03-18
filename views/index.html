@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+
+   <head>
+      <title>Timestamp Microservice</title>
+      <link rel="shortcut icon" href="https://cdn.hyperdev.com/us-east-1%3A52a203ff-088b-420f-81be-45bf559d01b1%2Ffavicon.ico" type="image/x-icon"/>
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+      <link href="style.css" rel="stylesheet" type="text/css">
+   </head>
+
+   <body>
+
+      <div class="container">
+        <h2>Timestamp Microservice</h2>
+        <h3>How to use :</h3>
+        <ol class="user-stories">
+          
+          <li>The API endpoint is <code>https://platinum-caribou.glitch.me/api/timestamp/:date_string</code></li>
+          <li>A valid date string obey the format as natural date or unixstamp as below, and then api returns a JSON having the structure: e.g. {"unix": 1479663089000 ,"utc": "Sun, 20 Nov 2016 17:31:29 GMT"}
+            <ul>
+              <li class = "index"><strong>Natural Date Example:</strong>
+              </li>  
+              <li>2016-12-02
+              </li>
+              <li>02-12-2016
+              </li> 
+              <li>December 2, 2016
+              </li> 
+              <li>December 2 2016
+              </li> 
+              <li>Dec 2, 2016
+              </li> 
+              <li>Dec 2 2016
+              </li> 
+              <li>2 December 2016
+              </li> 
+              <li>2 December 16
+              </li> 
+              <li>2 Dec 2016
+              </li>
+              <li>2 Dec 16
+              </li>
+              <li class = "index"><strong>Unixtimestamp Example:</strong>
+              </li> 
+              <li>1450137600
+              </li>  
+            </ul>  
+          </li>
+          <li>if input a <strong>invalid</strong> date string or <strong>empty</strong>, the api returns a JSON: 
+{"unix": null, "utc" : "Invalid Date" }
+          </li>  
+        </ol>
+
+        <h3>Example Usage:</h3>
+        <ul>
+          <li><a href = "https://platinum-caribou.glitch.me/api/timestamp/2015-12-25" >https://platinum-caribou.glitch.me/api/timestamp/2015-12-25</a></li>
+          <li><a href = "https://platinum-caribou.glitch.me/api/timestamp/1450137600" >https://platinum-caribou.glitch.me/api/timestamp/1450137600</a></li>
+        </ul>
+
+        <h3>Example Output:</h3>
+        <p>
+          <code>{"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}</code>
+        </p>
+      </div>
+      <div class="footer">
+        <p>
+          by <a href="https://github.com/dream-ardor">Dan Barrick</a> | <a href="https://platinum-caribou.glitch.me">Click here to Remix</a>
+        </p>
+      </div>
+   </body>
+
+</html>
